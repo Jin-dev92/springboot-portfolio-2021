@@ -4,12 +4,12 @@ import com.devjin.domain.Posts.Posts;
 import com.devjin.domain.Posts.PostsRepository;
 import org.junit.After;
 import org.junit.Test;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import static org.assertj.core.api.Assertions.assertThat;
-
 import java.util.List;
 
 @RunWith(SpringRunner.class)
@@ -17,17 +17,17 @@ import java.util.List;
 public class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
-
     @After
     public void destoryAll(){
         postsRepository.deleteAll();
     }
+
     @Test
-    public void 게시물작성테스트(){
+    @DisplayName("게시물이 잘 작성 되는지?")
+    public void 게시물작성이잘되는지(){
         String title = "제제제제제모고곡";
         String contents = "sodyd";
-        //given
-
+//        //given
         postsRepository.save(
                 Posts.builder()
                 .title(title)
@@ -35,8 +35,8 @@ public class PostsRepositoryTest {
                 .regDate("2021-01-12")
                 .author("김의진")
                 .build());
-
-        //when
+//
+//        //when
         List<Posts> dataList = postsRepository.findAll();
 
         //then
