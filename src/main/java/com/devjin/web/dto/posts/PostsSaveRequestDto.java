@@ -10,14 +10,12 @@ import lombok.NoArgsConstructor;
 public class PostsSaveRequestDto {
     private String title;
     private String contents;
-    private String regDate;
     private String author;
 
     @Builder
-    public PostsSaveRequestDto(String title, String contents, String regDate, String author) {
+    public PostsSaveRequestDto(String title, String contents, String author) {
         this.title = title;
         this.contents = contents;
-        this.regDate = regDate;
         this.author = author;
     }
 
@@ -25,7 +23,6 @@ public class PostsSaveRequestDto {
         return Posts.builder()
                 .title(title)
                 .contents(contents)
-                .regDate(regDate)
                 .author(author)
                 .build();
     }
