@@ -1,5 +1,7 @@
 import react from 'react';
 import { HashRouter, Link, Route } from 'react-router-dom';
+// library
+import bootstrap from 'react-bootstrap';
 
 function Navigation(params) {
     return (

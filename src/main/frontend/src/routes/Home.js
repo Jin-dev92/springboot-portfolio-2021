@@ -1,8 +1,10 @@
-import react from 'react';
-
+import react, {useEffect} from 'react';
 function Home() {
+
     return (
-        <div>메인 홈</div>
+        <div className="container">
+            
+        </div>
     );
 }
 
