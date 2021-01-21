@@ -9,12 +9,14 @@ import java.time.LocalDateTime;
 @Getter
 @NoArgsConstructor
 public class PostsListRequestDto {
+    private Long no;
     private String title;
     private String contents;
     private String author;
     private LocalDateTime modifiedDate;
 
     public PostsListRequestDto(Posts posts) {
+        this.no = posts.getNo();
         this.title = posts.getTitle();
         this.contents = posts.getContents();
         this.author = posts.getAuthor();

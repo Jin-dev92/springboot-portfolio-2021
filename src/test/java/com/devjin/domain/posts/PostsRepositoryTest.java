@@ -66,7 +66,7 @@ public class PostsRepositoryTest {
     }
 
     @Test
-    public void 어드민페이지리스트확인(){
+    public void 어드민페이지리스트잘뜨는지확인(){
         //given 더미 데이터 입력
         postsRepository.save(Posts.builder()
                 .title("제제제제제제제목")
